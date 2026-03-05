@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#db_navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 50px;
+}
+
+#db_navBarCaption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#db_logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#db_title_name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    flex-grow: 1;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+#db_navbar .btn {
+    margin-left: 10px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+#db_btn_signIn {
+    border: 2px solid #e74c3c;
+    background: transparent;
+}
+#db_btn_signIn a { color: #e74c3c; text-decoration: none; }
+#db_btn_signIn:hover { background: #e74c3c; box-shadow: 0 5px 15px rgba(231,76,60,0.3); }
+#db_btn_signIn:hover a { color: #fff; }
+
+#db_btn_regi {
+    background: #2c3e50;
+    border: 2px solid #2c3e50;
+}
+#db_btn_regi a { color: #fff; text-decoration: none; }
+#db_btn_regi:hover { background: #1a252f; box-shadow: 0 5px 15px rgba(44,62,80,0.3); }
+
+#db_mainWall {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#db_mainCaption h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+#db_mainCaption p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out;
+}
+
+.sectionArea {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.featuresTop {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.featuresTop h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.featuresTop p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.featuresBody .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.col3 {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.zoom {
+    overflow: hidden;
+    height: 220px;
+}
+
+.zoom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.item:hover .zoom img {
+    transform: scale(1.1);
+}
+
+.itemText {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemText h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.itemText p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.btnDetails {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.btnDetails:hover {
+    background: #c0392b;
+}
+
+footer {
+    background-color: #2c3e50 !important;
+    color: #ecf0f1;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e74c3c !important;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
