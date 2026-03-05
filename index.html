@@ -231,45 +231,106 @@
                 </div>
             </div>
         </div>
-        <!-- Company Section -->
-        <section class="sectionArea" id="company_section" style="background: #050a1a; padding-top: 50px;">
+        <!-- Company Section: Sliding Mission -->
+        <section class="sectionArea" id="company_section" style="background: white;">
             <div class="container">
-                <div class="featuresTop">
-                    <h2>The Antigravity Vision</h2>
-                    <p>Driving the future of premium mobility in India</p>
+                <div class="featuresTop text-center mb-5">
+                    <h2 style="font-size: 3.5rem; font-weight: 800; color: var(--deep-navy);">The Antigravity Mission
+                    </h2>
+                    <p style="font-size: 1.2rem; color: var(--text-secondary);">Redefining the vertical limits of luxury
+                        mobility</p>
                 </div>
-                <div class="glass-card mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h3 class="text-cyan mb-4">Redefining Excellence</h3>
-                            <p class="text-secondary">Auto Imperio was founded on a simple principle: to provide a car
-                                rental
-                                experience that feels weightless. By combining an elite fleet of vehicles with
-                                cutting-edge
-                                technology and a commitment to absolute customer satisfaction, we've created a service
-                                that
-                                stands apart.</p>
-                            <p class="text-secondary">Based in the heart of Jaipur, we serve the most discerning
-                                travelers
-                                across India, ensuring that every mile driven is a testament to luxury and precision.
-                            </p>
+
+                <!-- Mission Navigation -->
+                <div class="mission-nav">
+                    <div class="mission-link active" onclick="showMission('story', 33)">OUR STORY</div>
+                    <div class="mission-link" onclick="showMission('mission', 66)">THE MISSION</div>
+                    <div class="mission-link" onclick="showMission('values', 100)">CORE VALUES</div>
+                </div>
+
+                <div class="mission-container">
+                    <!-- Our Story Slide -->
+                    <div class="mission-slide active" id="slide-story">
+                        <div class="meter-wrapper">
+                            <svg class="meter-svg" viewBox="0 0 200 200">
+                                <circle class="meter-bg" cx="100" cy="100" r="90"></circle>
+                                <circle class="meter-fill" id="meter-fill" cx="100" cy="100" r="90"></circle>
+                            </svg>
+                            <div class="meter-percentage" id="meter-val">0%</div>
                         </div>
-                        <div class="col-lg-6">
-                            <img src="assets/img/cars/POLO.jpg" class="img-fluid rounded-3xl shadow-lg border-glass"
-                                alt="Company Vision">
+                        <div>
+                            <h3 class="text-cyan mb-4" style="font-size: 2rem; font-weight: 800;">A Journey of Elevation
+                            </h3>
+                            <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">Born in Jaipur, Auto
+                                Imperio started as a vision to eliminate the
+                                friction of traditional car rentals. We wanted to create a service that feels as light
+                                as
+                                air—where the focus is purely on the thrill of the drive.</p>
+                            <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">Today, we represent
+                                the
+                                pinnacle of premium car rental in India,
+                                blending heritage with futuristic technology.</p>
+                        </div>
+                    </div>
+
+                    <!-- The Mission Slide -->
+                    <div class="mission-slide" id="slide-mission">
+                        <div class="meter-wrapper">
+                            <svg class="meter-svg" viewBox="0 0 200 200">
+                                <circle class="meter-bg" cx="100" cy="100" r="90"></circle>
+                                <circle class="meter-fill" cx="100" cy="100" r="90" style="stroke-dashoffset: 192;">
+                                </circle>
+                            </svg>
+                            <div class="meter-percentage">66%</div>
+                        </div>
+                        <div>
+                            <h3 class="text-cyan mb-4" style="font-size: 2rem; font-weight: 800;">Zero Gravity Mobility
+                            </h3>
+                            <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">Our mission is
+                                simple: To
+                                provide an "Antigravity" experience. This
+                                means zero delays, zero stress, and absolute luxury. We are building the infrastructure
+                                for
+                                the next generation of travelers.</p>
+                            <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">By 2027, we aim to be
+                                India's first fully digitized, carbon-neutral
+                                luxury fleet service.</p>
+                        </div>
+                    </div>
+
+                    <!-- Core Values Slide -->
+                    <div class="mission-slide" id="slide-values">
+                        <div class="meter-wrapper">
+                            <svg class="meter-svg" viewBox="0 0 200 200">
+                                <circle class="meter-bg" cx="100" cy="100" r="90"></circle>
+                                <circle class="meter-fill" cx="100" cy="100" r="90" style="stroke-dashoffset: 0;">
+                                </circle>
+                            </svg>
+                            <div class="meter-percentage">100%</div>
+                        </div>
+                        <div>
+                            <h3 class="text-cyan mb-4" style="font-size: 2rem; font-weight: 800;">The Pillars of Imperio
+                            </h3>
+                            <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                                <strong>Integrity:</strong> We are transparent in every transaction.
+                                No hidden costs, ever.<br>
+                                <strong>Innovation:</strong> Constant aesthetic and functional iteration.<br>
+                                <strong>Excellence:</strong> Only the finest vehicles enter our fleet.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="text-center text-lg-start py-5" style="background-color: #050a1a !important;">
+        <!-- Light Mode Footer -->
+        <footer class="text-center text-lg-start py-5"
+            style="background-color: white !important; border-top: 1px solid var(--glass-border);">
             <div class="container text-center text-md-start">
                 <div class="row g-5">
                     <div class="col-md-3">
-                        <img src="assets/img/logo.png" style="width: 80px; filter: grayscale(1) brightness(2);"
-                            class="mb-4">
-                        <h6 class="text-uppercase fw-bold text-white mb-4">AUTO BEST IMPERIO</h6>
+                        <img src="assets/img/logo.png" style="width: 60px; filter: contrast(1.2);" class="mb-4">
+                        <h6 class="text-uppercase fw-bold text-dark mb-4">AUTO BEST IMPERIO</h6>
                         <p class="small text-secondary text-start">Experience the future of mobility with Antigravity.
                             Premium rentals for the modern explorer.</p>
                     </div>
@@ -282,8 +343,7 @@
                             <li class="mb-2"><a href="#db_features" class="text-decoration-none small">Luxury SUVs</a>
                             </li>
                             <li class="mb-2"><a href="#db_features" class="text-decoration-none small">Vintage
-                                    Classics</a>
-                            </li>
+                                    Classics</a></li>
                         </ul>
                     </div>
 
@@ -293,8 +353,7 @@
                             <li class="mb-2"><a href="#company_section" class="text-decoration-none small">Our Story</a>
                             </li>
                             <li class="mb-2"><a href="#company_section"
-                                    class="text-decoration-none small">Partnerships</a>
-                            </li>
+                                    class="text-decoration-none small">Partnerships</a></li>
                             <li class="mb-2"><a href="#company_section" class="text-decoration-none small">Concierge</a>
                             </li>
                         </ul>
@@ -305,18 +364,44 @@
                         <p class="small text-secondary mb-2">JAIPUR, RAJASTHAN, INDIA</p>
                         <p class="small text-secondary mb-2">concierge@antigravity.abi</p>
                         <div class="mt-4 d-flex gap-3">
-                            <img src="assets/icon/social/icons8_instagram_32.png"
-                                style="width: 24px; filter: brightness(0.7);">
-                            <img src="assets/icon/social/icons8_twitter_32.png"
-                                style="width: 24px; filter: brightness(0.7);">
+                            <img src="assets/icon/social/icons8_instagram_32.png" style="width: 24px; opacity: 0.7;">
+                            <img src="assets/icon/social/icons8_twitter_32.png" style="width: 24px; opacity: 0.7;">
                             <img src="assets/icon/social/icons8_linkedin_circled_32.png"
-                                style="width: 24px; filter: brightness(0.7);">
+                                style="width: 24px; opacity: 0.7;">
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+
+        <!-- Scripts -->
         <script>
+            // Mission Section Logic
+            function showMission(type, percent) {
+                document.querySelectorAll('.mission-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.innerText.toLowerCase().includes(type.substring(0, 4))) link.classList.add('active');
+                });
+
+                document.querySelectorAll('.mission-slide').forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                document.getElementById('slide-' + type).classList.add('active');
+
+                if (type === 'story') updateMeter(percent);
+            }
+
+            function updateMeter(percent) {
+                const circle = document.getElementById('meter-fill');
+                const text = document.getElementById('meter-val');
+                if (!circle || !text) return;
+                const circumference = 2 * Math.PI * 90;
+                const offset = circumference - (percent / 100 * circumference);
+                circle.style.strokeDashoffset = offset;
+                text.innerText = percent + '%';
+            }
+
+            // Auth and Init Logic
             document.addEventListener('DOMContentLoaded', () => {
                 const authButtons = document.getElementById('authButtonsContainer');
                 const profileDashboard = document.getElementById('profileDashboard');
@@ -329,7 +414,6 @@
                         document.getElementById('profileName').textContent = user.firstName;
                         document.getElementById('profileWallet').textContent = user.wallet || '500';
                         document.getElementById('profileRides').textContent = user.rides || '0';
-
                         authButtons.classList.add('d-none');
                         profileDashboard.classList.remove('d-none');
                         profileDashboard.classList.add('d-flex');
@@ -340,6 +424,9 @@
                     localStorage.removeItem('abi_loggedIn');
                     window.location.reload();
                 });
+
+                // Init Mission Meter
+                setTimeout(() => updateMeter(33), 800);
             });
         </script>
 </body>
