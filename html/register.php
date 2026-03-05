@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>GMA - Register</title>
+    <link rel="icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body class="bgColor">
+<div class="container">
+    <div class="card shadow-lg o-hidden border-0 my-5 mb-5">
+        <div class="card-body p-0">
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-flex">
+                    <div class="flex-grow-1 bg-register-image">
+                        <div id="circle" style="position: relative; top: 105px; left: 20px;" class="shadow">
+                            <img style="width: 190px; height: 170px; top: 20px; position: relative"
+                                 src="../assets/img/logoBlack.png"></div>
+                        <h3 style="position: relative; top: 90px; left: 100px; color: black; font-family: Roboto,sans-serif">
+                            AUTO BEST IMPERIO </h3>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h4 class="text-dark mb-5">Create ABI an Account!</h4>
+                        </div>
+
+                        <form class="user" method="post" action="connect.php"> 
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" type="text" placeholder="First Name"
+                                           name="firstname" id="txtFName">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" type="text" placeholder="Last Name"
+                                           name="lastname" id="txtLName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-user mb-4"
+                                       type="email" aria-describedby="emailHelp" placeholder="Email Address"
+                                       name="email" id="txtEmail">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input class="form-control form-control-user"
+                                           type="password"
+                                           placeholder="Password" name="password" id="txtPassword">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user"
+                                           type="password"
+                                           placeholder="Repeat Password" name="password_repeat" id="txtConfirmPassword">
+                                </div>
+                            </div>
+                            <button class="btn btn-block text-white btn-user mb-5 btnColor" type="submit"> <!-- Changed button type to submit -->
+                                Register Account
+                            </button>
+                        </form>
+                        <div class="text-center"><a class="small" href="forgottenPassword.php">Forgot Password?</a>
+                        </div>
+                        <div class="text-center"><a class="small" href="login.php">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
