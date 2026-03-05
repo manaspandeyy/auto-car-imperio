@@ -33,18 +33,19 @@
                                     <div class="text-center">
                                         <h4 class="text-dark mb-4">Welcome Back ABI !</h4>
                                     </div>
-                                    <form class="user" action="login.php" method="post">
+                                    <form class="user" id="loginForm">
                                         <div class="form-group">
-                                            <input class="form-control form-control-user mt-5 mb-4" type="text"
-                                                id="txtUserName" placeholder="Enter email..." name="email">
+                                            <input class="form-control form-control-user mt-5 mb-4" type="email"
+                                                id="txtUserName" placeholder="Enter email..." name="email" required>
                                         </div>
                                         <div class="form-group">
                                             <input class="form-control form-control-user mb-5" type="password"
-                                                id="txtPassword" placeholder="Password" name="password">
+                                                id="txtPassword" placeholder="Password" name="password" required>
                                         </div>
 
-                                        <button class="login_btn_color btn btn-block text-white btn-user mb-4"
-                                            type="button" id="btn_Login">Login</button>
+                                        <div id="alertMsg" class="alert d-none mt-3" role="alert"></div>
+                                        <button class="btn btn-dark btn-block text-white btn-user mb-4 w-100"
+                                            type="submit" id="btn_Login">Login</button>
                                     </form>
                                     <div class="text-center mt-4"><a class="small" href="forgottenPassword.html">Forgot
                                             Password?</a></div>
@@ -60,8 +61,35 @@
         </div>
     </div>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/login/Login.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('txtUserName').value;
+            const password = document.getElementById('txtPassword').value;
+            const alertMsg = document.getElementById('alertMsg');
+
+            const storedUser = localStorage.getItem('abi_user');
+
+            if (storedUser) {
+                const user = JSON.parse(storedUser);
+                if (user.email === email && user.password === password) {
+                    localStorage.setItem('abi_loggedIn', 'true');
+                    alertMsg.className = 'alert alert-success mt-3';
+                    alertMsg.classList.remove('d-none');
+                    alertMsg.textContent = 'Login successful! Redirecting...';
+                    setTimeout(() => {
+                        window.location.href = '../index.html';
+                    }, 1000);
+                    return;
+                }
+            }
+
+            alertMsg.className = 'alert alert-danger mt-3';
+            alertMsg.classList.remove('d-none');
+            alertMsg.textContent = 'Invalid email or password.';
+        });
+    </script>
 </body>
 
 </html>

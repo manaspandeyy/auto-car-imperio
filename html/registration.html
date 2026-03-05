@@ -32,35 +32,35 @@
                                 <h4 class="text-dark mb-5">Create ABI an Account!</h4>
                             </div>
 
-                            <form class="user" method="post" action="connect.php">
+                            <form class="user" id="registerForm">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3">
                                         <input class="form-control form-control-user" type="text"
-                                            placeholder="First Name" name="firstname" id="txtFName">
+                                            placeholder="First Name" name="firstname" id="txtFName" required>
                                     </div>
                                     <div class="col-sm-6 mb-3">
                                         <input class="form-control form-control-user" type="text"
-                                            placeholder="Last Name" name="lastname" id="txtLName">
+                                            placeholder="Last Name" name="lastname" id="txtLName" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control form-control-user mb-4" type="email"
                                         aria-describedby="emailHelp" placeholder="Email Address" name="email"
-                                        id="txtEmail">
+                                        id="txtEmail" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input class="form-control form-control-user" type="password"
-                                            placeholder="Password" name="password" id="txtPassword">
+                                            placeholder="Password" name="password" id="txtPassword" required>
                                     </div>
                                     <div class="col-sm-6 mb-3">
                                         <input class="form-control form-control-user" type="password"
-                                            placeholder="Repeat Password" name="password_repeat"
-                                            id="txtConfirmPassword">
+                                            placeholder="Repeat Password" name="password_repeat" id="txtConfirmPassword"
+                                            required>
                                     </div>
                                 </div>
-                                <button class="btn btn-block text-white btn-user mb-5 btnColor" type="submit">
-                                    <!-- Changed button type to submit -->
+                                <div id="alertMsg" class="alert d-none mt-3" role="alert"></div>
+                                <button class="btn btn-dark btn-block text-white btn-user mb-5 w-100" type="submit">
                                     Register Account
                                 </button>
                             </form>
@@ -78,6 +78,35 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const fName = document.getElementById('txtFName').value;
+            const lName = document.getElementById('txtLName').value;
+            const email = document.getElementById('txtEmail').value;
+            const password = document.getElementById('txtPassword').value;
+            const confirmMsg = document.getElementById('txtConfirmPassword').value;
+            const alertMsg = document.getElementById('alertMsg');
+
+            if (password !== confirmMsg) {
+                alertMsg.className = 'alert alert-danger mt-3';
+                alertMsg.classList.remove('d-none');
+                alertMsg.textContent = 'Passwords do not match!';
+                return;
+            }
+
+            const user = { firstName: fName, lastName: lName, email: email, password: password, wallet: 500, rides: 0 };
+            localStorage.setItem('abi_user', JSON.stringify(user));
+
+            alertMsg.className = 'alert alert-success mt-3';
+            alertMsg.classList.remove('d-none');
+            alertMsg.textContent = 'You have registered successfully! Redirecting...';
+
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 2000);
+        });
+    </script>
 </body>
 
 </html>

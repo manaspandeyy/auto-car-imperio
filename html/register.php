@@ -57,7 +57,7 @@
                                            placeholder="Repeat Password" name="password_repeat" id="txtConfirmPassword">
                                 </div>
                             </div>
-                            <button class="btn btn-block text-white btn-user mb-5 btnColor" type="submit"> <!-- Changed button type to submit -->
+                            <button class="btn btn-dark btn-block text-white btn-user mb-5 w-100" type="submit"> <!-- Changed button type to submit -->
                                 Register Account
                             </button>
                         </form>

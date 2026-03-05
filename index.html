@@ -16,81 +16,107 @@
         <div id="db_navBarCaption">
             <img id="db_logo" src="assets/img/logo.png" alt="image">
             <h1 id="db_title_name">AUTO BEST IMPERIO</h1>
-            <button type="button" class="btn" id="db_btn_signIn"><a href="html/login.html" id="db_btn_sign_a">Sign
-                    In</a>
-            </button>
-            <button type="button" class="btn" id="db_btn_regi"><a href="html/registration.html"
-                    id="db_btn_regi_a">Register</a>
-            </button>
+            <div id="authButtonsContainer" class="d-flex align-items-center gap-2">
+                <a href="html/login.html" class="btn btn-outline-danger shadow-sm" id="btnSignIn"
+                    style="border-radius: 25px; font-weight: 600; padding: 8px 20px;">Sign In</a>
+                <a href="html/registration.html" class="btn text-white shadow-sm" id="btnRegi"
+                    style="background: #2c3e50; border-radius: 25px; font-weight: 600; padding: 8px 20px;">Register</a>
+            </div>
+
+            <!-- Profile Dashboard (Visible when logged in) -->
+            <div id="profileDashboard" class="d-none align-items-center gap-3">
+                <div class="text-dark text-end d-none d-md-block" style="font-size: 0.9rem; line-height: 1.2;">
+                    <span class="d-block fw-bold" style="color: #2c3e50;">Welcome, <span
+                            id="profileName">User</span></span>
+                    <span class="d-block" style="color: #7f8c8d; font-size: 0.8rem;">Wallet: $<span
+                            id="profileWallet">0</span> | Rides: <span id="profileRides">0</span></span>
+                </div>
+                <div class="d-flex align-items-center shadow-sm"
+                    style="background: #fff; border-radius: 50px; padding: 5px 15px 5px 5px; border: 1px solid #e0e0e0;">
+                    <img src="assets/img/me/me.jpg" alt="Profile"
+                        style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; margin-right: 12px; border: 2px solid #2c3e50;">
+                    <button class="btn btn-sm text-danger fw-bold m-0 p-0" id="btnLogout"
+                        style="border: none; background: transparent;">Logout</button>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="db_mainWall" class="slider">
-        <div id="db_mainCaption" class="caption">
-            <h1 id="db_h1">AUTO BEST IMPERIO</h1>
-            <p id="db_p">Online Car Rental Service</p>
+    <section id="db_mainWall">
+        <div id="db_mainCaption">
+            <h1>Elevate Your Journey</h1>
+            <p>Experience the Antigravity of Premium Travel</p>
+
+            <!-- Floating Booking Widget -->
+            <div class="hero-booking-widget mt-5">
+                <div class="glass-card shadow-lg d-flex align-items-center gap-4"
+                    style="padding: 20px 40px; border-radius: 50px;">
+                    <div class="text-start">
+                        <label class="d-block small text-cyan fw-bold mb-1">PICKUP LOCATION</label>
+                        <select class="bg-transparent border-0 text-white fw-bold"
+                            style="outline: none; cursor: pointer;">
+                            <option class="bg-dark">JAIPUR, RAJASTHAN</option>
+                            <option class="bg-dark">NEW DELHI (NCR)</option>
+                            <option class="bg-dark">MUMBAI, MAHARASHTRA</option>
+                            <option class="bg-dark">BANGALORE, KARNATAKA</option>
+                            <option class="bg-dark">CHANDIGARH, PUNJAB</option>
+                        </select>
+                    </div>
+                    <div style="width: 1px; height: 40px; background: rgba(255,255,255,0.1);"></div>
+                    <div class="text-start">
+                        <label class="d-block small text-cyan fw-bold mb-1">PICKUP DATE</label>
+                        <input type="date" class="bg-transparent border-0 text-white fw-bold"
+                            style="outline: none; cursor: pointer;">
+                    </div>
+                    <div style="width: 1px; height: 40px; background: rgba(255,255,255,0.1);"></div>
+                    <div class="text-start">
+                        <label class="d-block small text-cyan fw-bold mb-1">DROP DATE</label>
+                        <input type="date" class="bg-transparent border-0 text-white fw-bold"
+                            style="outline: none; cursor: pointer;">
+                    </div>
+                    <button class="btnDetails m-0" style="padding: 15px 40px; border-radius: 50px;">BOOK NOW</button>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="sectionArea">
+    <section class="sectionArea" id="db_features"
+        style="background: linear-gradient(to bottom, var(--deep-navy), #050a1a);">
         <div class="featuresTop">
-            <h2 id="db_newCarReviews">New Car Reviews</h2>
-            <p> Our expert reviewers report back with the latest </p>
+            <div class="container">
+                <h2 class="text-center">Premium Fleet</h2>
+                <p class="text-center">Select from our elite collection of antigravity-inspired vehicles</p>
+            </div>
         </div>
         <div class="featuresBody">
             <div class="container">
+                <h3> 2021 FORTUNER </h3>
+                <p>
+                    "Embark on adventures in style with our robust Fortuner rental.
+                    Perfect for Indian terrain,
+                    it blends rugged reliability with modern comfort,
+                    ensuring unforgettable journeys wherever the road leads."
+                </p>
+                <a href="#" class="btnDetails" id="db_car2"> More Details</a>
+            </div>
+        </div>
+        </div>
 
-                <div class="col3">
-                    <div class="item">
-                        <div class="zoom">
-                            <img src="assets/img/cars/VINTAGE.jpg">
-                        </div>
-                        <div class="itemText">
-                            <h3>90'S VINTAGE CARS </h3>
-                            <p>
-                                "Rent our timeless vintage car for a touch of elegance and nostalgia.
-                                Perfect for weddings or leisurely drives, it promises unforgettable moments in classic
-                                style."
-                            </p>
-                            <a href="#" class="btnDetails" id="db_car1"> More Details</a>
-                        </div>
-                    </div>
+        <div class="col3">
+            <div class="item">
+                <div class="zoom">
+                    <img src="assets/img/cars/THAR.jpg" alt="Thar">
                 </div>
-
-                <div class="col3">
-                    <div class="item">
-                        <div class="zoom">
-                            <img src="assets/img/cars/FORTUNER.jpg">
-                        </div>
-                        <div class="itemText">
-                            <h3> 2021 FORTUNER </h3>
-                            <p>
-                                "Embark on adventures in style with our robust Fortuner rental.
-                                Perfect for Indian terrain,
-                                it blends rugged reliability with modern comfort,
-                                ensuring unforgettable journeys wherever the road leads."
-                            </p>
-                            <a href="#" class="btnDetails" id="db_car2"> More Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col3">
-                    <div class="item">
-                        <div class="zoom">
-                            <img src="assets/img/cars/THAR.jpg">
-                        </div>
-                        <div class="itemText">
-                            <h3> 2022 THAR</h3>
-                            <p>
-                                "Discover adventure in our Thar rental, perfect for exploring India's diverse
-                                landscapes.
-                                With its rugged design and off-road capabilities,
-                                it promises unforgettable journeys filled with excitement."
-                            </p>
-                            <a href="#" class="btnDetails" id="db_car3"> More Details</a>
-                        </div>
-                    </div>
+                <div class="itemText">
+                    <h3>MAHINDRA THAR 4X4</h3>
+                    <p>
+                        "The icon of adventure. Experience the raw power and open-air freedom that only a Thar
+                        can provide. Built for the bold and the restless, it promises unforgettable journeys
+                        filled with excitement across India's diverse landscapes."
+                    </p>
+                    <a href="#" class="btnDetails" id="db_car3">Book Adventure</a>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
         <div class="featuresBody">
             <div class="container">
@@ -205,76 +231,117 @@
                 </div>
             </div>
         </div>
-    </section>
-    <footer class="text-center text-lg-start text-white" style="background-color: #4f545f">
-
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks :</span>
-            </div>
-
-            <div>
-                <a href="" class="ml-2 text-reset text-decoration-none">
-                    <img src="assets/icon/social/icons8_google_32.png">
-                </a>
-                <a href="" class="ml-2 text-reset text-decoration-none">
-                    <img src="assets/icon/social/facebook_32.png">
-                </a>
-                <a href="" class="ml-2 text-reset text-decoration-none">
-                    <img src="assets/icon/social/icons8_instagram_32.png">
-                </a>
-                <a href="" class="ml-2 text-reset text-decoration-none">
-                    <img src="assets/icon/social/icons8_twitter_32.png">
-                </a>
-                <a href="" class="ml-2 text-reset text-decoration-none">
-                    <img src="assets/icon/social/icons8_linkedin_circled_32.png">
-                </a>
-            </div>
-        </section>
-
-        <section class="">
-
-            <div class="container text-center text-md-start mt-5">
-                <div class="row mt-3">
-                    <div><img class="position-relative" src="assets/img/logo.png"
-                            style="width: 150px; height: 150px; left: -40px; top: 3px"></div>
-
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i>auto best imperio</h6>
-                        <p>"Start your journey with us. Explore our fleet for exceptional service and competitive rates.
-                            Your adventure begins now!".</p>
+        <!-- Company Section -->
+        <section class="sectionArea" id="company_section" style="background: #050a1a; padding-top: 50px;">
+            <div class="container">
+                <div class="featuresTop">
+                    <h2>The Antigravity Vision</h2>
+                    <p>Driving the future of premium mobility in India</p>
+                </div>
+                <div class="glass-card mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h3 class="text-cyan mb-4">Redefining Excellence</h3>
+                            <p class="text-secondary">Auto Imperio was founded on a simple principle: to provide a car
+                                rental
+                                experience that feels weightless. By combining an elite fleet of vehicles with
+                                cutting-edge
+                                technology and a commitment to absolute customer satisfaction, we've created a service
+                                that
+                                stands apart.</p>
+                            <p class="text-secondary">Based in the heart of Jaipur, we serve the most discerning
+                                travelers
+                                across India, ensuring that every mile driven is a testament to luxury and precision.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="assets/img/cars/POLO.jpg" class="img-fluid rounded-3xl shadow-lg border-glass"
+                                alt="Company Vision">
+                        </div>
                     </div>
-
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Products</h6>
-                        <p><a href="#!" class="text-reset text-decoration-none">VINTAGE</a></p>
-                        <p><a href="#!" class="text-reset text-decoration-none">MINIVAN </a></p>
-                        <p><a href="#!" class="text-reset text-decoration-none">SUV'S</a></p>
-                    </div>
-
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
-                        <p><a href="#!" class="text-reset text-decoration-none">Products</a></p>
-                        <p><a href="#!" class="text-reset text-decoration-none">Rating</a></p>
-                        <p><a href="#!" class="text-reset text-decoration-none">Help</a></p>
-                    </div>
-
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
-                        <p><img class="position-relative text-decoration-none" style="right: 10px"
-                                src="assets/icon/social/icons8_home_page_16.png"> JAIPUR , INDIA</p>
-                        <p><img class="position-relative text-decoration-none" style="right: 18px"
-                                src="assets/icon/social/icons8_Mail_16.png"> autobestimperio@gmail.com</p>
-                        <p><img class="position-relative text-decoration-none" style="right: 35px"
-                                src="assets/icon/social/icons8_phone_16.png"> +918931063069</p>
-                    </div>
-
                 </div>
             </div>
         </section>
 
+        <footer class="text-center text-lg-start py-5" style="background-color: #050a1a !important;">
+            <div class="container text-center text-md-start">
+                <div class="row g-5">
+                    <div class="col-md-3">
+                        <img src="assets/img/logo.png" style="width: 80px; filter: grayscale(1) brightness(2);"
+                            class="mb-4">
+                        <h6 class="text-uppercase fw-bold text-white mb-4">AUTO BEST IMPERIO</h6>
+                        <p class="small text-secondary text-start">Experience the future of mobility with Antigravity.
+                            Premium rentals for the modern explorer.</p>
+                    </div>
 
-    </footer>
+                    <div class="col-md-3">
+                        <h6 class="text-uppercase fw-bold text-cyan mb-4">The Fleet</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#db_features" class="text-decoration-none small">Supercars</a>
+                            </li>
+                            <li class="mb-2"><a href="#db_features" class="text-decoration-none small">Luxury SUVs</a>
+                            </li>
+                            <li class="mb-2"><a href="#db_features" class="text-decoration-none small">Vintage
+                                    Classics</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6 class="text-uppercase fw-bold text-cyan mb-4">Company</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#company_section" class="text-decoration-none small">Our Story</a>
+                            </li>
+                            <li class="mb-2"><a href="#company_section"
+                                    class="text-decoration-none small">Partnerships</a>
+                            </li>
+                            <li class="mb-2"><a href="#company_section" class="text-decoration-none small">Concierge</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6 class="text-uppercase fw-bold text-cyan mb-4">Contact</h6>
+                        <p class="small text-secondary mb-2">JAIPUR, RAJASTHAN, INDIA</p>
+                        <p class="small text-secondary mb-2">concierge@antigravity.abi</p>
+                        <div class="mt-4 d-flex gap-3">
+                            <img src="assets/icon/social/icons8_instagram_32.png"
+                                style="width: 24px; filter: brightness(0.7);">
+                            <img src="assets/icon/social/icons8_twitter_32.png"
+                                style="width: 24px; filter: brightness(0.7);">
+                            <img src="assets/icon/social/icons8_linkedin_circled_32.png"
+                                style="width: 24px; filter: brightness(0.7);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const authButtons = document.getElementById('authButtonsContainer');
+                const profileDashboard = document.getElementById('profileDashboard');
+                const isLoggedIn = localStorage.getItem('abi_loggedIn') === 'true';
+
+                if (isLoggedIn) {
+                    const storedUser = localStorage.getItem('abi_user');
+                    if (storedUser) {
+                        const user = JSON.parse(storedUser);
+                        document.getElementById('profileName').textContent = user.firstName;
+                        document.getElementById('profileWallet').textContent = user.wallet || '500';
+                        document.getElementById('profileRides').textContent = user.rides || '0';
+
+                        authButtons.classList.add('d-none');
+                        profileDashboard.classList.remove('d-none');
+                        profileDashboard.classList.add('d-flex');
+                    }
+                }
+
+                document.getElementById('btnLogout').addEventListener('click', () => {
+                    localStorage.removeItem('abi_loggedIn');
+                    window.location.reload();
+                });
+            });
+        </script>
 </body>
 
 </html>
